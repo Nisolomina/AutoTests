@@ -1,27 +1,53 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SpecFlowPages;
+using OpenQA;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+
 
 namespace AutoTests
 {
     [Binding]
     public class FirstFeatureSteps
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        [BeforeScenario]
+        public void Setup()
         {
-            ScenarioContext.Current.Pending();
+            Driver.Initialize();
+            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
+        }
+
+        [AfterScenario]
+        public void TearDown()
+        {
+            Driver.Close();
+        }
+        [Given(@"the specflow page")]
+        public void GivenTheSpecflowPage()
+        {
+           
         }
         
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+        [When(@"I press SpecFlow\+")]
+        public void WhenIPressSpecFlow()
         {
-            ScenarioContext.Current.Pending();
+            NavigateToSpecFlowExcel.ClickSpecFlowPlus();
         }
         
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        [When(@"Specflow\+-Excel")]
+        public void WhenSpecflow_Excel()
         {
-            ScenarioContext.Current.Pending();
+            NavigateToSpecFlowExcel.ClickSpecFlowPlusExcel();
+        }
+        
+        [Then(@"I am able to see '(.*)' button")]
+        public void ThenIAmAbleToSeeButton(string p0)
+        {
+            Assert.AreEqual(ConstantsUtils.GetStartedExcelButtonText,
+                NavigateToSpecFlowExcel.GetButtonGetStartedText());
         }
     }
 }

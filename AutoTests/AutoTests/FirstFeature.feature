@@ -1,11 +1,11 @@
 ﻿Feature: FirstFeature
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to navigate to Specflow-Excel documentation
+	As a Specflow user
+	I want to Select Specflow+-->Specflow+-Excel
 
 @mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: Navigate to Specflow+
+	Given the specflow page
+	When I press SpecFlow+
+	And Specflow+-Excel
+	Then I am able to see 'Get Started Now with Specflow+ Excel!' button
