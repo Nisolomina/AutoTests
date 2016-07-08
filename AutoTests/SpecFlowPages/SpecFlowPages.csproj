@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="ConstantsUtils.cs" />
     <Compile Include="Driver.cs" />
-    <Compile Include="NavigateToSpecFlowExcel.cs" />
+    <Compile Include="NavigateToEnglishPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

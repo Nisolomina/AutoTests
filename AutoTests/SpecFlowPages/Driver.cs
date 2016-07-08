@@ -34,7 +34,7 @@ namespace SpecFlowPages
         {
             Instance.Close();
         }
-
+         
         private static void TurnOnWait()
         {
             Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));

@@ -64,23 +64,23 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FirstFeature.feature.cs">
+    <Compile Include="ChangeLanguageSteps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChangLanguage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FirstFeature.feature</DependentUpon>
+      <DependentUpon>ChangLanguage.feature</DependentUpon>
     </Compile>
-    <Compile Include="FirstFeatureSteps.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="FirstFeature.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FirstFeature.feature.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
+    <None Include="ChangLanguage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangLanguage.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpecFlowPages\SpecFlowPages.csproj">
