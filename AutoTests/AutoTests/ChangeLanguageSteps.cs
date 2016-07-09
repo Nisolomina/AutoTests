@@ -15,7 +15,6 @@ namespace AutoTests
         public void Setup()
         {
             Driver.Initialize();
-            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
         }
 
         [AfterScenario]
@@ -27,7 +26,7 @@ namespace AutoTests
         [Given(@"the russian main page")]
         public void GivenTheRussianMainPage()
         {
-            
+            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
         }
         
         [When(@"I press EN")]
