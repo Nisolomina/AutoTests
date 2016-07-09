@@ -20,7 +20,7 @@ namespace SpecFlowPages
 
         public static void Initialize()
         {
-            Instance = new ChromeDriver("C:/Distrib/chromedriver_win32");
+            Instance = new ChromeDriver();
             TurnOnWait();
             Instance.Manage().Window.Maximize();
         }
