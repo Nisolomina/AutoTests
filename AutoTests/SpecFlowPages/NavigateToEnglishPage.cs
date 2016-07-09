@@ -12,7 +12,7 @@ namespace SpecFlowPages
     {
         public static void ClickEnButton()
         {
-            var EnButton = Driver.Instance.FindElement(By.XPath(".//*[@class='languagebar text-right']/a[@class='flag flag-us']"));
+            var EnButton = Driver.Instance.FindElement(By.CssSelector("#header > div > div > a.flag.flag-us"));
             EnButton.Click();
         }
 
