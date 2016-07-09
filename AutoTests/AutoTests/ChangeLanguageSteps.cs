@@ -1,20 +1,21 @@
-﻿using System;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SpecFlowPages;
-using OpenQA;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace AutoTests
 {
     [Binding]
     public class ChangeLanguageSteps
     {
+
+        private IWebDriver Driver { get; set; }
+
         [BeforeScenario]
         public void Setup()
         {
-            Driver.Initialize();
+            DriverFactory driverFactory = new DriverFactory();
+            Driver = driverFactory.CreateChromeDriver();
         }
 
         [AfterScenario]
@@ -26,20 +27,21 @@ namespace AutoTests
         [Given(@"the russian main page")]
         public void GivenTheRussianMainPage()
         {
-            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
+            Driver.Navigate().GoToUrl(ConstantsUtils.Url);
         }
         
         [When(@"I press EN")]
-        public void WhenIPressEN()
+        public void WhenIPressEn()
         {
-            NavigateToEnglishPage.ClickEnButton();
+            var enButton = Driver.FindElement(By.CssSelector("#header > div > div > a.flag.flag-us"));
+            enButton.Click();
         }
         
         [Then(@"I am able to see '(.*)' url")]
         public void ThenIAmAbleToSeeEnUrl(string p0)
         {
             Assert.AreEqual(ConstantsUtils.GetEnUrl,
-                NavigateToEnglishPage.GetEnUrl());
+                Driver.Url);
         }
     }
 }
