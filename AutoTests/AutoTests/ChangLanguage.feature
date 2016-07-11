@@ -5,6 +5,6 @@
 
 @mytag
 Scenario: Change language from Russian to English
-	Given the russian main page
+	Given I open the site 'http://www.eugenesqr.com/'
 	When I press EN
 	Then I am able to see 'http://www.eugenesqr.com/en/posts/1' url

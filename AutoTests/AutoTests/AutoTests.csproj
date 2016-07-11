@@ -84,12 +84,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpecFlowPages\SpecFlowPages.csproj">
-      <Project>{504a939c-aff4-4dd8-8a74-9705d0d8e5a8}</Project>
-      <Name>SpecFlowPages</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="..\packages\Chromium.ChromeDriver.2.22\content\chromedriver.exe">
       <Link>chromedriver.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

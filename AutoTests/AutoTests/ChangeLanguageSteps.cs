@@ -1,6 +1,5 @@
 ﻿using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SpecFlowPages;
 using OpenQA.Selenium;
 
 namespace AutoTests
@@ -24,10 +23,10 @@ namespace AutoTests
             Driver.Close();
         }
 
-        [Given(@"the russian main page")]
-        public void GivenTheRussianMainPage()
+        [Given(@"I open the site '(.*)'")]
+        public void GivenIOpenTheSite(string siteUrl)
         {
-            Driver.Navigate().GoToUrl(ConstantsUtils.Url);
+            Driver.Navigate().GoToUrl(siteUrl);
         }
         
         [When(@"I press EN")]
@@ -38,10 +37,11 @@ namespace AutoTests
         }
         
         [Then(@"I am able to see '(.*)' url")]
-        public void ThenIAmAbleToSeeEnUrl(string p0)
+        public void ThenIAmAbleToSeeEnUrl(string enUrl)
         {
-            Assert.AreEqual(ConstantsUtils.GetEnUrl,
+            Assert.AreEqual(enUrl,
                 Driver.Url);
         }
+
     }
 }

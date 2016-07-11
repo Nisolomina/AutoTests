@@ -79,7 +79,7 @@ namespace AutoTests
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("the russian main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.When("I press EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
