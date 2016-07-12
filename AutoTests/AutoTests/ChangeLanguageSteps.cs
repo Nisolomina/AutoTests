@@ -35,12 +35,30 @@ namespace AutoTests
             var enButton = Driver.FindElement(By.CssSelector("#header > div > div > a.flag.flag-us"));
             enButton.Click();
         }
+        [When(@"I press button '(.*)'")]
+        public void WhenIPressButton(string buttonName)
+        {
+            string css = string.Empty;
+
+            if ( buttonName == "RU" ) 
+            {
+                css = "#header > div > div > a.flag.flag-ru";                
+            }
+
+            if (buttonName == "EN")
+            {
+                css = "#header > div > div > a.flag.flag-us";
+            }
+
+            var button = Driver.FindElement(By.CssSelector(css));
+            button.Click();
+        }
+
         
         [Then(@"I am able to see '(.*)' url")]
-        public void ThenIAmAbleToSeeEnUrl(string enUrl)
+        public void ThenIAmAbleToSeeEnUrl(string inputUrl)
         {
-            Assert.AreEqual(enUrl,
-                Driver.Url);
+            Assert.AreEqual(inputUrl, Driver.Url);
         }
 
     }

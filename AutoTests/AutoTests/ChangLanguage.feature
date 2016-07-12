@@ -5,6 +5,11 @@
 
 @mytag
 Scenario: Change language from Russian to English
-	Given I open the site 'http://www.eugenesqr.com/'
-	When I press EN
+	Given I open the site 'http://www.eugenesqr.com/ru/posts/1'
+	When I press button 'EN'
 	Then I am able to see 'http://www.eugenesqr.com/en/posts/1' url
+
+Scenario: Change language from English to Russian
+	Given I open the site 'http://www.eugenesqr.com/en/posts/1'
+	When I press button 'RU'
+	Then I am able to see 'http://www.eugenesqr.com/ru/posts/1' url
