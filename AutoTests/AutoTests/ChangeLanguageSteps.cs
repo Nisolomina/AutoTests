@@ -33,6 +33,7 @@ namespace AutoTests
         public void WhenIPressEn()
         {
             var enButton = Driver.FindElement(By.CssSelector("#header > div > div > a.flag.flag-us"));
+
             enButton.Click();
         }
         [When(@"I press button '(.*)'")]
@@ -42,16 +43,17 @@ namespace AutoTests
 
             if ( buttonName == "RU" ) 
             {
-                css = "#header > div > div > a.flag.flag-ru";                
+                css = "#header > div > div > a[ng-href='/ru/posts/1']";                
             }
 
             if (buttonName == "EN")
             {
-                css = "#header > div > div > a.flag.flag-us";
+                css = "#header > div > div > a[ng-href='/en/posts/1']";
             }
-
+         
             var button = Driver.FindElement(By.CssSelector(css));
             button.Click();
+
         }
 
         
