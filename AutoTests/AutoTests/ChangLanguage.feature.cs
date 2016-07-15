@@ -105,6 +105,70 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Main Russian Page by default")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language")]
+        public virtual void OpenMainRussianPageByDefault()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Main Russian Page by default", ((string[])(null)));
+#line 17
+this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.When("I open the site \'http://www.eugenesqr.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Main English Page if English locale in url")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language")]
+        public virtual void OpenMainEnglishPageIfEnglishLocaleInUrl()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Main English Page if English locale in url", ((string[])(null)));
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 22
+ testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Main Russian Page if Spain locale in url")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language")]
+        public virtual void OpenMainRussianPageIfSpainLocaleInUrl()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Main Russian Page if Spain locale in url", ((string[])(null)));
+#line 25
+this.ScenarioSetup(scenarioInfo);
+#line 26
+ testRunner.When("I open the site \'http://www.eugenesqr.com/es/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Main Russian Page if unknown locale in url")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language")]
+        public virtual void OpenMainRussianPageIfUnknownLocaleInUrl()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Main Russian Page if unknown locale in url", ((string[])(null)));
+#line 29
+this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.When("I open the site \'http://www.eugenesqr.com/abrakadabra/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
