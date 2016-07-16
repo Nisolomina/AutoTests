@@ -3,15 +3,14 @@
 	As a client
 	I want to select buttons "RU" and "EN"
 
-@mytag
 Scenario: Change language from Russian to English
 	Given I open the site 'http://www.eugenesqr.com/ru/posts/1'
-	When I press button 'EN'
+	When I press button to change language to English
 	Then I am able to see 'http://www.eugenesqr.com/en/posts/1' url
 
 Scenario: Change language from English to Russian
 	Given I open the site 'http://www.eugenesqr.com/en/posts/1'
-	When I press button 'RU'
+	When I press button to change language to Russian
 	Then I am able to see 'http://www.eugenesqr.com/ru/posts/1' url
 
 Scenario: Open Main Russian Page by default

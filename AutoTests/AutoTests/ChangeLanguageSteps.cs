@@ -1,61 +1,62 @@
-﻿using TechTalk.SpecFlow;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using TechTalk.SpecFlow;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace AutoTests
 {
     [Binding]
     public class ChangeLanguageSteps
     {
-
-        private IWebDriver Driver { get; set; }
+        private IWebDriver _driver;
 
         [BeforeScenario]
         public void Setup()
         {
             DriverFactory driverFactory = new DriverFactory();
-            Driver = driverFactory.CreateChromeDriver();
+            _driver = driverFactory.CreateChromeDriver();
         }
 
         [AfterScenario]
         public void TearDown()
         {
-            Driver.Close();
+            _driver.Close();
         }
 
         [Given(@"I open the site '(.*)'")]
         [When(@"I open the site '(.*)'")]
         public void GivenIOpenTheSite(string siteUrl)
         {
-            Driver.Navigate().GoToUrl(siteUrl);
+            _driver.Navigate().GoToUrl(siteUrl);
         }
         
-        [When(@"I press button '(.*)'")]
-        public void WhenIPressButton(string buttonName)
+        [When(@"I press button to change language to English")]
+        public void WhenIPressButtonToChangeLanguageToEnglish()
         {
-            string css = string.Empty;
-
-            if ( buttonName == "RU" ) 
-            {
-                css = "#header > div > div > a[ng-href='/ru/posts/1']";                
-            }
-
-            if (buttonName == "EN")
-            {
-                css = "#header > div > div > a[ng-href='/en/posts/1']";
-            }
-         
-            var button = Driver.FindElement(By.CssSelector(css));
-            button.Click();
-
+            PressButton("en");
+        }
+        [When(@"I press button to change language to Russian")]
+        public void WhenIPressButtonToChangeLanguageToRussian()
+        {
+            PressButton("ru");
         }
 
-        
         [Then(@"I am able to see '(.*)' url")]
         public void ThenIAmAbleToSeeEnUrl(string inputUrl)
         {
-            Assert.AreEqual(inputUrl, Driver.Url);
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait.Until(driver => _driver.Url == inputUrl);
         }
 
+        private void PressButton(string languageAbbreviation)
+        {
+            IWebElement button = _driver.FindElement(
+                By.CssSelector(
+                    string.Format(
+                        "#header > div > div > a[ng-href='/{0}/posts/1']",
+                        languageAbbreviation)));
+
+            button.Click();
+        }
     }
 }
