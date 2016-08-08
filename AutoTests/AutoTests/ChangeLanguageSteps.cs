@@ -58,5 +58,23 @@ namespace AutoTests
 
             button.Click();
         }
+        [When(@"I press button to see earlier posts")]
+        public void WhenIPressButtonToSeeEarlierPosts()
+        {
+            IWebElement button = _driver.FindElement(
+                By.CssSelector("#post-listing > ul.pager > li.next > a[ng-href='/en/posts/2']"));
+
+            button.Click();
+        }
+        [When(@"I press button to see newer posts")]
+        public void WhenIPressButtonToSeeNewerPosts()
+        {
+            IWebElement button = _driver.FindElement(
+                By.CssSelector("#post-listing > ul.pager > li.previous > a[ng-href='/en/posts/1']"));
+
+            button.Click();
+        }
+
+
     }
 }

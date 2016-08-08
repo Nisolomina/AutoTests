@@ -72,6 +72,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ChangLanguage.feature</DependentUpon>
     </Compile>
+    <Compile Include="AddXSSInjection.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddXSSInjection.feature</DependentUpon>
+    </Compile>
+    <Compile Include="OpenPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenPage.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -81,6 +91,14 @@
     <None Include="ChangLanguage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ChangLanguage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AddXSSInjection.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddXSSInjection.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OpenPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OpenPage.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

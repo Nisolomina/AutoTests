@@ -1,7 +1,7 @@
 ﻿Feature: Change language
 	In order to change language from Russian to English and backwards
 	As a client
-	I want to select buttons "RU" and "EN"
+	I want to see site content in Russian or in English languges 
 
 Scenario: Change language from Russian to English
 	Given I open the site 'http://www.eugenesqr.com/ru/posts/1'

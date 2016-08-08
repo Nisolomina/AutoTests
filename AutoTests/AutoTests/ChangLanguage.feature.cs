@@ -31,7 +31,7 @@ namespace AutoTests
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Change language", "\tIn order to change language from Russian to English and backwards\r\n\tAs a client\r" +
-                    "\n\tI want to select buttons \"RU\" and \"EN\"", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "\n\tI want to see site content in Russian or in English languges ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
