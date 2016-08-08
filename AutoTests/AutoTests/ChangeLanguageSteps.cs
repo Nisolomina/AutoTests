@@ -44,7 +44,7 @@ namespace AutoTests
         [Then(@"I am able to see '(.*)' url")]
         public void ThenIAmAbleToSeeEnUrl(string inputUrl)
         {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
             wait.Until(driver => _driver.Url == inputUrl);
         }
 
