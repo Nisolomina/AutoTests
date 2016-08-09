@@ -33,12 +33,12 @@ namespace AutoTests
         [When(@"I press button to change language to English")]
         public void WhenIPressButtonToChangeLanguageToEnglish()
         {
-            PressButton("en");
+            PressButtonToChangeLanguage("en");
         }
         [When(@"I press button to change language to Russian")]
         public void WhenIPressButtonToChangeLanguageToRussian()
         {
-            PressButton("ru");
+            PressButtonToChangeLanguage("ru");
         }
 
         [Then(@"I am able to see '(.*)' url")]
@@ -48,7 +48,7 @@ namespace AutoTests
             wait.Until(driver => _driver.Url == inputUrl);
         }
 
-        private void PressButton(string languageAbbreviation)
+        private void PressButtonToChangeLanguage(string languageAbbreviation)
         {
             IWebElement button = _driver.FindElement(
                 By.CssSelector(
@@ -58,23 +58,41 @@ namespace AutoTests
 
             button.Click();
         }
-        [When(@"I press button to see earlier posts")]
-        public void WhenIPressButtonToSeeEarlierPosts()
+
+        private void PressButtonToChangePage(string buttonName, string languageAbbreviation, int pageNumber)
         {
             IWebElement button = _driver.FindElement(
-                By.CssSelector("#post-listing > ul.pager > li.next > a[ng-href='/en/posts/2']"));
+                By.CssSelector(
+                    string.Format(
+                            "#post-listing > ul.pager > li.{0} > a[ng-href='/{1}/posts/{2}']",
+                            buttonName,
+                            languageAbbreviation,
+                            pageNumber
+                )));
 
             button.Click();
         }
-        [When(@"I press button to see newer posts")]
-        public void WhenIPressButtonToSeeNewerPosts()
+        [When(@"I press button to see earlier Russian posts")]
+        public void WhenIPressButtonToSeeEarlierRussianPosts()
         {
-            IWebElement button = _driver.FindElement(
-                By.CssSelector("#post-listing > ul.pager > li.previous > a[ng-href='/en/posts/1']"));
-
-            button.Click();
+            PressButtonToChangePage("next", "ru", 2);
         }
 
+        [When(@"I press button to see newer Russian posts")]
+        public void WhenIPressButtonToSeeNewerRussianPosts()
+        {
+            PressButtonToChangePage("previous","ru", 1);
+        }
+        [When(@"I press button to see earlier English posts")]
+        public void WhenIPressButtonToSeeEarlierEnglishPosts()
+        {
+            PressButtonToChangePage("next", "en", 2);
+        }
 
+        [When(@"I press button to see newer English posts")]
+        public void WhenIPressButtonToSeeNewerEnglishPosts()
+        {
+            PressButtonToChangePage("previous", "en", 1);
+        }
     }
 }

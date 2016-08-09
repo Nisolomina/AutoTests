@@ -69,17 +69,17 @@ namespace AutoTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older English page")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
-        public virtual void OpenTheOlderPage()
+        public virtual void OpenTheOlderEnglishPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older English page", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("I press button to see earlier posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press button to see earlier English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -87,19 +87,87 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the newer page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the newer English page")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
-        public virtual void OpenTheNewerPage()
+        public virtual void OpenTheNewerEnglishPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer English page", ((string[])(null)));
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12
  testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
- testRunner.When("I press button to see newer posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press button to see newer English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the nonexistent English page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
+        public virtual void OpenTheNonexistentEnglishPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the nonexistent English page", ((string[])(null)));
+#line 16
+this.ScenarioSetup(scenarioInfo);
+#line 17
+ testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/5\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/404.html\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older Russian page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
+        public virtual void OpenTheOlderRussianPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older Russian page", ((string[])(null)));
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 21
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+ testRunner.When("I press button to see earlier Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the newer Russian page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
+        public virtual void OpenTheNewerRussianPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer Russian page", ((string[])(null)));
+#line 25
+this.ScenarioSetup(scenarioInfo);
+#line 26
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 27
+ testRunner.When("I press button to see newer Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the nonexistent Russian page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open page")]
+        public virtual void OpenTheNonexistentRussianPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the nonexistent Russian page", ((string[])(null)));
+#line 30
+this.ScenarioSetup(scenarioInfo);
+#line 31
+ testRunner.When("I open the site \'http://www.eugenesqr.com/ru/posts/5\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/404.html\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
