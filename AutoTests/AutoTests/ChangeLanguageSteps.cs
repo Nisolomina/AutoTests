@@ -81,7 +81,7 @@ namespace AutoTests
         [When(@"I press button to see newer Russian posts")]
         public void WhenIPressButtonToSeeNewerRussianPosts()
         {
-            PressButtonToChangePage("previous","ru", 1);
+            PressButtonToChangePage("previous", "ru", 1);
         }
         [When(@"I press button to see earlier English posts")]
         public void WhenIPressButtonToSeeEarlierEnglishPosts()
@@ -94,5 +94,47 @@ namespace AutoTests
         {
             PressButtonToChangePage("previous", "en", 1);
         }
+
+        private void ClickLinkOfPost(string languageAbbreviation, string postTag)
+        {
+            IWebElement link = _driver.FindElement(
+                By.CssSelector(
+                    string.Format(
+                            "#post-listing > ul.separated-list > li > header > a[ng-href='/{0}/post/{1}']",
+                            languageAbbreviation,
+                            postTag
+                )));
+
+            link.Click();
+        }
+
+        [When(@"I click on link of Russian post '(.*)'")]
+        public void WhenIClickOnLinkOfRussianPost(string postName)
+        {
+            ClickLinkOfPost("ru", postName);
+        }
+
+        [When(@"I click on link of English post '(.*)'")]
+        public void WhenIClickOnLinkOfEnglishPost(string postName)
+        {
+            ClickLinkOfPost("en", postName);
+        }
+
+        [Then(@"I am able to see Older button")]
+        public void ThenIAmAbleToSeeOlderButton()
+        {
+            var button = _driver.FindElement(
+                By.CssSelector("#post-listing > ul.pager > li.next > a[ng-href='/en/posts/2']"));
+
+        }
+
+        [Then(@"I am able to see Newer button")]
+        public void ThenIAmAbleToSeeNewerButton()
+        {
+            var button = _driver.FindElement(
+                By.CssSelector("#post-listing > ul.pager > li.previous > a[ng-href='/en/posts/1']"));
+
+        }
+
     }
 }

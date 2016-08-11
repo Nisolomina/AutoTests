@@ -66,6 +66,11 @@
   <ItemGroup>
     <Compile Include="ChangeLanguageSteps.cs" />
     <Compile Include="DriverFactory.cs" />
+    <Compile Include="OpenPost.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenPost.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChangLanguage.feature.cs">
       <AutoGen>True</AutoGen>
@@ -77,15 +82,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddXSSInjection.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenPage.feature.cs">
+    <Compile Include="OpenListingPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OpenPage.feature</DependentUpon>
+      <DependentUpon>OpenListingPage.feature</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="OpenPost.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OpenPost.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="ChangLanguage.feature">
@@ -96,9 +105,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddXSSInjection.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenPage.feature">
+    <None Include="OpenListingPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OpenPage.feature.cs</LastGenOutput>
+      <LastGenOutput>OpenListingPage.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
