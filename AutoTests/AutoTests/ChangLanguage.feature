@@ -38,7 +38,7 @@ Scenario: Change language of post from Russian to English
 	When I press button to change language to English
 	Then I am able to see 'http://www.eugenesqr.com/en/post/second-iteration-completed' url
 
-Scenario: Change language pagefrom English to Russian
+Scenario: Change language of post from English to Russian
 	Given I open the site 'http://www.eugenesqr.com/en/post/second-iteration-completed'
 	When I press button to change language to Russian
 	Then I am able to see 'http://www.eugenesqr.com/ru/post/second-iteration-completed' url

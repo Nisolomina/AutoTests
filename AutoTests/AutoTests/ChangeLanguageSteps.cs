@@ -33,7 +33,7 @@ namespace AutoTests
         [When(@"I press button to change language to English")]
         public void WhenIPressButtonToChangeLanguageToEnglish()
         {
-            PressButtonToChangeLanguage("en");
+            PressButtonToChangeLanguage("us");
         }
         [When(@"I press button to change language to Russian")]
         public void WhenIPressButtonToChangeLanguageToRussian()
@@ -48,17 +48,27 @@ namespace AutoTests
             wait.Until(driver => _driver.Url == inputUrl);
         }
 
+        /*The working version of method PressButtonToChangeLanguage with link in CSS selector
+            private void PressButtonToChangeLanguage(string languageAbbreviation)
+            {
+                IWebElement button = _driver.FindElement(
+                    By.CssSelector(
+                        string.Format(
+                            "#header > div > div > a[ng-href='/{0}/posts/1']",
+                            languageAbbreviation)));
+
+                button.Click();
+            }*/
         private void PressButtonToChangeLanguage(string languageAbbreviation)
         {
             IWebElement button = _driver.FindElement(
                 By.CssSelector(
                     string.Format(
-                        "#header > div > div > a[ng-href='/{0}/posts/1']",
+                    "#header > div > div > a.flag.flag-{0}",
                         languageAbbreviation)));
 
             button.Click();
         }
-
         private void PressButtonToChangePage(string buttonName, string languageAbbreviation, int pageNumber)
         {
             IWebElement button = _driver.FindElement(

@@ -204,11 +204,11 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Change language pagefrom English to Russian")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Change language of post from English to Russian")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language")]
-        public virtual void ChangeLanguagePagefromEnglishToRussian()
+        public virtual void ChangeLanguageOfPostFromEnglishToRussian()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language pagefrom English to Russian", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language of post from English to Russian", ((string[])(null)));
 #line 41
 this.ScenarioSetup(scenarioInfo);
 #line 42
