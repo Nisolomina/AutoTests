@@ -6,30 +6,8 @@ using OpenQA.Selenium.Support.UI;
 namespace AutoTests
 {
     [Binding]
-    public class ChangeLanguageSteps
+    public class ChangeLanguageSteps : StepsBase
     {
-        private IWebDriver _driver;
-
-        [BeforeScenario]
-        public void Setup()
-        {
-            DriverFactory driverFactory = new DriverFactory();
-            _driver = driverFactory.CreateChromeDriver();
-        }
-
-        [AfterScenario]
-        public void TearDown()
-        {
-            _driver.Close();
-        }
-
-        [Given(@"I open the site '(.*)'")]
-        [When(@"I open the site '(.*)'")]
-        public void GivenIOpenTheSite(string siteUrl)
-        {
-            _driver.Navigate().GoToUrl(siteUrl);
-        }
-        
         [When(@"I press button to change language to English")]
         public void WhenIPressButtonToChangeLanguageToEnglish()
         {
@@ -39,13 +17,6 @@ namespace AutoTests
         public void WhenIPressButtonToChangeLanguageToRussian()
         {
             PressButtonToChangeLanguage("ru");
-        }
-
-        [Then(@"I am able to see '(.*)' url")]
-        public void ThenIAmAbleToSeeEnUrl(string inputUrl)
-        {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
-            wait.Until(driver => _driver.Url == inputUrl);
         }
 
         /*The working version of method PressButtonToChangeLanguage with link in CSS selector
@@ -61,7 +32,7 @@ namespace AutoTests
             }*/
         private void PressButtonToChangeLanguage(string languageAbbreviation)
         {
-            IWebElement button = _driver.FindElement(
+            IWebElement button = Driver.FindElement(
                 By.CssSelector(
                     string.Format(
                     "#header > div > div > a.flag.flag-{0}",
@@ -71,7 +42,7 @@ namespace AutoTests
         }
         private void PressButtonToChangePage(string buttonName, string languageAbbreviation, int pageNumber)
         {
-            IWebElement button = _driver.FindElement(
+            IWebElement button = Driver.FindElement(
                 By.CssSelector(
                     string.Format(
                             "#post-listing > ul.pager > li.{0} > a[ng-href='/{1}/posts/{2}']",
@@ -107,7 +78,7 @@ namespace AutoTests
 
         private void ClickLinkOfPost(string languageAbbreviation, string postTag)
         {
-            IWebElement link = _driver.FindElement(
+            IWebElement link = Driver.FindElement(
                 By.CssSelector(
                     string.Format(
                             "#post-listing > ul.separated-list > li > header > a[ng-href='/{0}/post/{1}']",
@@ -133,7 +104,7 @@ namespace AutoTests
         [Then(@"I am able to see Older button")]
         public void ThenIAmAbleToSeeOlderButton()
         {
-            var button = _driver.FindElement(
+            Driver.FindElement(
                 By.CssSelector("#post-listing > ul.pager > li.next > a[ng-href='/en/posts/2']"));
 
         }
@@ -141,7 +112,7 @@ namespace AutoTests
         [Then(@"I am able to see Newer button")]
         public void ThenIAmAbleToSeeNewerButton()
         {
-            var button = _driver.FindElement(
+            Driver.FindElement(
                 By.CssSelector("#post-listing > ul.pager > li.previous > a[ng-href='/en/posts/1']"));
 
         }

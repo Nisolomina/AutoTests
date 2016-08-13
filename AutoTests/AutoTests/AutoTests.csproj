@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="ChangeLanguageSteps.cs" />
     <Compile Include="DriverFactory.cs" />
+    <Compile Include="NavigationSteps.cs" />
     <Compile Include="OpenPost.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +88,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenListingPage.feature</DependentUpon>
     </Compile>
+    <Compile Include="ScenarioHooks.cs" />
+    <Compile Include="StepsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
