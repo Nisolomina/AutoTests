@@ -7,34 +7,13 @@ namespace AutoTests
 {
     [Binding]
     public class ChangeLanguageSteps
-    {
-        private IWebDriver _driver;
-
-        [BeforeScenario]
-        public void Setup()
-        {
-            DriverFactory driverFactory = new DriverFactory();
-            _driver = driverFactory.CreateChromeDriver();
-        }
-
-        [AfterScenario]
-        public void TearDown()
-        {
-            _driver.Close();
-        }
-
-        [Given(@"I open the site '(.*)'")]
-        [When(@"I open the site '(.*)'")]
-        public void GivenIOpenTheSite(string siteUrl)
-        {
-            _driver.Navigate().GoToUrl(siteUrl);
-        }
-        
+    {     
         [When(@"I press button to change language to English")]
         public void WhenIPressButtonToChangeLanguageToEnglish()
         {
-            PressButtonToChangeLanguage("en");
+            PressButtonToChangeLanguage("us");
         }
+
         [When(@"I press button to change language to Russian")]
         public void WhenIPressButtonToChangeLanguageToRussian()
         {
@@ -53,11 +32,22 @@ namespace AutoTests
             IWebElement button = _driver.FindElement(
                 By.CssSelector(
                     string.Format(
-                        "#header > div > div > a[ng-href='/{0}/posts/1']",
+                        "#header > div > div > a.flag.flag-{0}']",
                         languageAbbreviation)));
 
             button.Click();
         }
+
+        /*private void PressButtonToChangeLanguage(string languageAbbreviation)
+        {
+            IWebElement button = _driver.FindElement(
+                By.CssSelector(
+                    string.Format(
+                        "#header > div > div > a[ng-href='/{0}/posts/1']",
+                        languageAbbreviation)));
+
+            button.Click();
+        }*/
 
         private void PressButtonToChangePage(string buttonName, string languageAbbreviation, int pageNumber)
         {
