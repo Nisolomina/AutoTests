@@ -6,28 +6,9 @@ using OpenQA.Selenium.Support.UI;
 namespace AutoTests
 {
     [Binding]
-    class StepsBase
+    public class StepsBase
     {
-        protected IWebDriver Driver;
-
-        [BeforeScenario]
-        protected void Setup() 
-        {
-
-            DriverFactory driverFactory = new DriverFactory();
-            ScenarioContext.Current.ToString("Driver") = driverFactory.CreateChromeDriver();
-        }
-
-        [AfterScenario]
-        public void TearDown()
-        {
-            ((IWebDriver)ScenarioContext.Current("Driver")).Close();
-        }
-
-        [AfterScenario]
-        protected void TearDown()
-        {
-            Driver.Close();
-        }
+        get( return ((IWebDriver)ScenarioContext.Current["Driver"]);
+       
     }
 }

@@ -20,13 +20,6 @@ namespace AutoTests
             PressButtonToChangeLanguage("ru");
         }
 
-        [Then(@"I am able to see '(.*)' url")]
-        public void ThenIAmAbleToSeeEnUrl(string inputUrl)
-        {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
-            wait.Until(driver => _driver.Url == inputUrl);
-        }
-
         private void PressButtonToChangeLanguage(string languageAbbreviation)
         {
             IWebElement button = _driver.FindElement(

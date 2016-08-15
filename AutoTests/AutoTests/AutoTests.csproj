@@ -87,6 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenListingPage.feature</DependentUpon>
     </Compile>
+    <Compile Include="ScenarioHooks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
