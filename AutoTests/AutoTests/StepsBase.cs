@@ -5,10 +5,12 @@ using OpenQA.Selenium.Support.UI;
 
 namespace AutoTests
 {
-    [Binding]
     public class StepsBase
     {
-        get( return ((IWebDriver)ScenarioContext.Current["Driver"]);
-       
+        protected IWebDriver Driver
+        {
+            get { return ((IWebDriver)ScenarioContext.Current["Driver"]); }
+
+        }
     }
 }

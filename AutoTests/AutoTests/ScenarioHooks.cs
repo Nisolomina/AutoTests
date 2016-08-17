@@ -8,19 +8,19 @@ namespace AutoTests
     [Binding]
     public class ScenarioHooks
     {
-        private string DriverKey = "Driver";
+        private const string DriverKey = "Driver";
 
         [BeforeScenario]
         protected void Setup()        {
       
             DriverFactory driverFactory = new DriverFactory();
-            ScenarioContext.Current["Driver"] = driverFactory.CreateChromeDriver();
+            ScenarioContext.Current[DriverKey] = driverFactory.CreateChromeDriver();
         }
 
         [AfterScenario]
         public void TearDown()
         {
-            ((IWebDriver)ScenarioContext.Current["Driver"]).Close();
+            ((IWebDriver)ScenarioContext.Current[DriverKey]).Close();
         }
     }
 }

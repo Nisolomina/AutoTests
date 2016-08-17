@@ -9,7 +9,7 @@ namespace AutoTests
         public ChromeDriver CreateChromeDriver()
         {
             ChromeDriver driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
             driver.Manage().Window.Maximize();
 
             return driver;

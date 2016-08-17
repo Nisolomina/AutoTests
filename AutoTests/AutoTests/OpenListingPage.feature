@@ -3,18 +3,9 @@
 	As a client
 	I want to open page using buttons and URLs
 
-Scenario: See the Older button
-	When I open the site 'http://www.eugenesqr.com/en/posts/1'
-	Then I am able to see Older button
-
 Scenario: See the Newer button
 	When I open the site 'http://www.eugenesqr.com/en/posts/1'
 	Then I am able to see Newer button
-
-Scenario: Open the older English page
-	Given I open the site 'http://www.eugenesqr.com/en/posts/1'
-	When I press button to see earlier English posts
-	Then I am able to see 'http://www.eugenesqr.com/en/posts/2' url
 
 Scenario: Open the newer English page
 	Given I open the site 'http://www.eugenesqr.com/en/posts/2'
@@ -24,11 +15,6 @@ Scenario: Open the newer English page
 Scenario: Open the nonexistent English page
 	When I open the site 'http://www.eugenesqr.com/en/posts/808080'
 	Then I am able to see 'http://www.eugenesqr.com/en/404.html' url
-
-Scenario: Open the older Russian page
-	Given I open the site 'http://www.eugenesqr.com/ru/posts/1'
-	When I press button to see earlier Russian posts
-	Then I am able to see 'http://www.eugenesqr.com/ru/posts/2' url
 
 Scenario: Open the newer Russian page
 	Given I open the site 'http://www.eugenesqr.com/ru/posts/2'

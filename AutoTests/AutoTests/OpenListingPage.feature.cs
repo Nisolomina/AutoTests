@@ -69,51 +69,17 @@ namespace AutoTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the Older button")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open listing page")]
-        public virtual void SeeTheOlderButton()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the Older button", ((string[])(null)));
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 7
- testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.Then("I am able to see Older button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the Newer button")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open listing page")]
         public virtual void SeeTheNewerButton()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the Newer button", ((string[])(null)));
-#line 10
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 11
+#line 7
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 8
  testRunner.Then("I am able to see Newer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older English page")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open listing page")]
-        public virtual void OpenTheOlderEnglishPage()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older English page", ((string[])(null)));
-#line 14
-this.ScenarioSetup(scenarioInfo);
-#line 15
- testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
- testRunner.When("I press button to see earlier English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -124,13 +90,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenTheNewerEnglishPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer English page", ((string[])(null)));
-#line 19
+#line 10
 this.ScenarioSetup(scenarioInfo);
-#line 20
+#line 11
  testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
+#line 12
  testRunner.When("I press button to see newer English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 13
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -142,30 +108,12 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenTheNonexistentEnglishPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the nonexistent English page", ((string[])(null)));
-#line 24
+#line 15
 this.ScenarioSetup(scenarioInfo);
-#line 25
+#line 16
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/808080\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 17
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/404.html\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older Russian page")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open listing page")]
-        public virtual void OpenTheOlderRussianPage()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older Russian page", ((string[])(null)));
-#line 28
-this.ScenarioSetup(scenarioInfo);
-#line 29
- testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 30
- testRunner.When("I press button to see earlier Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -176,13 +124,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenTheNewerRussianPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer Russian page", ((string[])(null)));
-#line 33
+#line 19
 this.ScenarioSetup(scenarioInfo);
-#line 34
+#line 20
  testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
+#line 21
  testRunner.When("I press button to see newer Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 22
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -194,11 +142,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenTheNonexistentRussianPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the nonexistent Russian page", ((string[])(null)));
-#line 38
+#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 39
+#line 25
  testRunner.When("I open the site \'http://www.eugenesqr.com/ru/posts/808080\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 26
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/404.html\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -210,11 +158,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenFirstRussianPageIfPageNumberIsAbsent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian page if page number is absent", ((string[])(null)));
-#line 42
+#line 28
 this.ScenarioSetup(scenarioInfo);
-#line 43
+#line 29
  testRunner.When("I open the site \'http://www.eugenesqr.com/ru/posts/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 30
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -226,11 +174,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenFirstEnglishPageIfPageNumberIsAbsent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First English page if page number is absent", ((string[])(null)));
-#line 46
+#line 32
 this.ScenarioSetup(scenarioInfo);
-#line 47
+#line 33
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
+#line 34
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -242,11 +190,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenFirstRussianPageIfPostIdIsAbsent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian page if post id is absent", ((string[])(null)));
-#line 50
+#line 36
 this.ScenarioSetup(scenarioInfo);
-#line 51
+#line 37
  testRunner.When("I open the site \'http://www.eugenesqr.com/ru/post/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
+#line 38
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -258,11 +206,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OpenFirstEnglishPageIfPostIdIsAbsent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First English page if post id is absent", ((string[])(null)));
-#line 54
+#line 40
 this.ScenarioSetup(scenarioInfo);
-#line 55
+#line 41
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/post/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 42
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

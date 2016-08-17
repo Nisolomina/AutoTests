@@ -12,14 +12,15 @@ namespace AutoTests
         [When(@"I open the site '(.*)'")]
         public void GivenIOpenTheSite(string siteUrl)
         {
-            _driver.Navigate().GoToUrl(siteUrl);
+            Driver.Navigate().GoToUrl(siteUrl);
+            System.Threading.Thread.Sleep(5000);
         }
 
         [Then(@"I am able to see '(.*)' url")]
         public void ThenIAmAbleToSeeEnUrl(string inputUrl)
         {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
-            wait.Until(driver => _driver.Url == inputUrl);
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(20));
+            wait.Until(driver => Driver.Url == inputUrl);
         }
     }
 }
