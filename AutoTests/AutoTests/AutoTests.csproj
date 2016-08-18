@@ -64,29 +64,49 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ChangeLanguageOfPost.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeLanguageOfPost.feature</DependentUpon>
+    </Compile>
     <Compile Include="ChangeLanguageSteps.cs" />
     <Compile Include="DriverFactory.cs" />
     <Compile Include="NavigationSteps.cs" />
+    <Compile Include="OpenFirstEnglishPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenFirstEnglishPage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="OpenNextListingPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenNextListingPage.feature</DependentUpon>
+    </Compile>
     <Compile Include="OpenPost.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenPost.feature</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ChangLanguage.feature.cs">
+    <Compile Include="OpenPreviousListingPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChangLanguage.feature</DependentUpon>
+      <DependentUpon>OpenPreviousListingPage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChangLanguageOfFirstPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangLanguageOfFirstPage.feature</DependentUpon>
     </Compile>
     <Compile Include="AddXSSInjection.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AddXSSInjection.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenListingPage.feature.cs">
+    <Compile Include="OpenFirstRussianPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OpenListingPage.feature</DependentUpon>
+      <DependentUpon>OpenFirstRussianPage.feature</DependentUpon>
     </Compile>
     <Compile Include="ScenarioHooks.cs" />
     <Compile Include="StepsBase.cs" />
@@ -95,22 +115,38 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ChangeLanguageOfPost.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangeLanguageOfPost.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OpenFirstEnglishPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OpenFirstEnglishPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OpenNextListingPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OpenNextListingPage.feature.cs</LastGenOutput>
+    </None>
     <None Include="OpenPost.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenPost.feature.cs</LastGenOutput>
     </None>
-    <None Include="packages.config" />
-    <None Include="ChangLanguage.feature">
+    <None Include="OpenPreviousListingPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>ChangLanguage.feature.cs</LastGenOutput>
+      <LastGenOutput>OpenPreviousListingPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ChangLanguageOfFirstPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangLanguageOfFirstPage.feature.cs</LastGenOutput>
     </None>
     <None Include="AddXSSInjection.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddXSSInjection.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenListingPage.feature">
+    <None Include="OpenFirstRussianPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OpenListingPage.feature.cs</LastGenOutput>
+      <LastGenOutput>OpenFirstRussianPage.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
