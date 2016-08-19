@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutoTests
+namespace AutoTests.LocaleTests
 {
     using TechTalk.SpecFlow;
     
@@ -18,21 +18,20 @@ namespace AutoTests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class ChangeLanguageOfFirstPageFeature
+    public partial class ChangeLocaleInURLOfFirstPageFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ChangLanguageOfFirstPage.feature"
+#line 1 "ChangeLocaleInURLOfFirstPage.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Change language of First page", "\tIn order to change language from Russian to English and backwards on First page\r" +
-                    "\n\tAs a client\r\n\tI want to see First page content in Russian or in English langug" +
-                    "es ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Change locale in URL of First Page", "\tIn order to change URL using different locale on First page\r\n\tAs a client\r\n\tI wa" +
+                    "nt to see first page content in Russian or in English languges ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -47,9 +46,9 @@ namespace AutoTests
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Change language of First page")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Change locale in URL of First Page")))
             {
-                AutoTests.ChangeLanguageOfFirstPageFeature.FeatureSetup(null);
+                AutoTests.LocaleTests.ChangeLocaleInURLOfFirstPageFeature.FeatureSetup(null);
             }
         }
         
@@ -70,52 +69,16 @@ namespace AutoTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Change language of First page from Russian to English")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
-        public virtual void ChangeLanguageOfFirstPageFromRussianToEnglish()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language of First page from Russian to English", ((string[])(null)));
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 7
- testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
- testRunner.When("I press button to change language to English on First Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Change language of First page from English to Russian")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
-        public virtual void ChangeLanguageOfFirstPageFromEnglishToRussian()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language of First page from English to Russian", ((string[])(null)));
-#line 11
-this.ScenarioSetup(scenarioInfo);
-#line 12
- testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 13
- testRunner.When("I press button to change language to Russian on First Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First Russian Page by default")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
         public virtual void OpenFirstRussianPageByDefault()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian Page by default", ((string[])(null)));
-#line 16
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 17
+#line 7
  testRunner.When("I open the site \'http://www.eugenesqr.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 8
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -123,15 +86,31 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First Russian Page if locale is absent")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
         public virtual void OpenFirstRussianPageIfLocaleIsAbsent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian Page if locale is absent", ((string[])(null)));
-#line 20
+#line 10
 this.ScenarioSetup(scenarioInfo);
-#line 21
+#line 11
  testRunner.When("I open the site \'http://www.eugenesqr.com//posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 12
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First Russian Page if Russian locale in url")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
+        public virtual void OpenFirstRussianPageIfRussianLocaleInUrl()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian Page if Russian locale in url", ((string[])(null)));
+#line 14
+this.ScenarioSetup(scenarioInfo);
+#line 15
+ testRunner.When("I open the site \'http://www.eugenesqr.com/ru/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,15 +118,15 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First English Page if English locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
         public virtual void OpenFirstEnglishPageIfEnglishLocaleInUrl()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First English Page if English locale in url", ((string[])(null)));
-#line 24
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 25
+#line 19
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 20
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -155,15 +134,15 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First Russian Page if different locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
         public virtual void OpenFirstRussianPageIfDifferentLocaleInUrl()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian Page if different locale in url", ((string[])(null)));
-#line 28
+#line 22
 this.ScenarioSetup(scenarioInfo);
-#line 29
+#line 23
  testRunner.When("I open the site \'http://www.eugenesqr.com/es/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 24
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -171,15 +150,15 @@ this.ScenarioSetup(scenarioInfo);
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open First Russian Page if unknown locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of First page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change locale in URL of First Page")]
         public virtual void OpenFirstRussianPageIfUnknownLocaleInUrl()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open First Russian Page if unknown locale in url", ((string[])(null)));
-#line 32
+#line 26
 this.ScenarioSetup(scenarioInfo);
-#line 33
+#line 27
  testRunner.When("I open the site \'http://www.eugenesqr.com/abrakadabra/posts\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 28
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutoTests
+namespace AutoTests.NavigationTests
 {
     using TechTalk.SpecFlow;
     
@@ -48,7 +48,7 @@ namespace AutoTests
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Open First English page")))
             {
-                AutoTests.OpenFirstEnglishPageFeature.FeatureSetup(null);
+                AutoTests.NavigationTests.OpenFirstEnglishPageFeature.FeatureSetup(null);
             }
         }
         

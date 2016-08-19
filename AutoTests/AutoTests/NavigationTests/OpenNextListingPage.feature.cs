@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutoTests
+namespace AutoTests.NavigationTests
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace AutoTests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class OpenPreviousListingPageFeature
+    public partial class OpenNextListingPageFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "OpenPreviousListingPage.feature"
+#line 1 "OpenNextListingPage.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Open previous listing page", "\tIn order to check content of previous page\r\n\tAs a client\r\n\tI want to open previo" +
-                    "us page using buttons and URLs", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Open next listing page", "\tIn order to check content of next page\r\n\tAs a client\r\n\tI want to open next page " +
+                    "using buttons and URLs", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -46,9 +46,9 @@ namespace AutoTests
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Open previous listing page")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Open next listing page")))
             {
-                AutoTests.OpenPreviousListingPageFeature.FeatureSetup(null);
+                AutoTests.NavigationTests.OpenNextListingPageFeature.FeatureSetup(null);
             }
         }
         
@@ -69,53 +69,53 @@ namespace AutoTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the Newer button")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open previous listing page")]
-        public virtual void SeeTheNewerButton()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the Older button")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open next listing page")]
+        public virtual void SeeTheOlderButton()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the Newer button", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the Older button", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.When("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Then("I am able to see Newer button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am able to see Older button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the newer English page")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open previous listing page")]
-        public virtual void OpenTheNewerEnglishPage()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older English page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open next listing page")]
+        public virtual void OpenTheOlderEnglishPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer English page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older English page", ((string[])(null)));
 #line 10
 this.ScenarioSetup(scenarioInfo);
 #line 11
- testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/en/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.When("I press button to see newer English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press button to see earlier English posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the newer Russian page")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open previous listing page")]
-        public virtual void OpenTheNewerRussianPage()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open the older Russian page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Open next listing page")]
+        public virtual void OpenTheOlderRussianPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the newer Russian page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the older Russian page", ((string[])(null)));
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16
- testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/posts/1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
- testRunner.When("I press button to see newer Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press button to see earlier Russian posts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/1\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/posts/2\' url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

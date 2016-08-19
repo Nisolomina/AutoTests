@@ -64,89 +64,107 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ChangeLanguageOfPost.feature.cs">
+    <Compile Include="LocaleTests\ChangeLanguageOfPost.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ChangeLanguageOfPost.feature</DependentUpon>
     </Compile>
     <Compile Include="ChangeLanguageSteps.cs" />
+    <Compile Include="LocaleTests\ChangeLocaleInURLOfFirstPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeLocaleInURLOfFirstPage.feature</DependentUpon>
+    </Compile>
     <Compile Include="DriverFactory.cs" />
     <Compile Include="NavigationSteps.cs" />
-    <Compile Include="OpenFirstEnglishPage.feature.cs">
+    <Compile Include="NavigationTests\OpenFirstEnglishPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenFirstEnglishPage.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenNextListingPage.feature.cs">
+    <Compile Include="NavigationTests\OpenNextListingPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenNextListingPage.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenPost.feature.cs">
+    <Compile Include="NavigationTests\OpenPost.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenPost.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenPreviousListingPage.feature.cs">
+    <Compile Include="NavigationTests\OpenPreviousListingPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenPreviousListingPage.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ChangLanguageOfFirstPage.feature.cs">
+    <Compile Include="LocaleTests\ChangeLanguageOfFirstPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChangLanguageOfFirstPage.feature</DependentUpon>
+      <DependentUpon>ChangeLanguageOfFirstPage.feature</DependentUpon>
     </Compile>
     <Compile Include="AddXSSInjection.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AddXSSInjection.feature</DependentUpon>
     </Compile>
-    <Compile Include="OpenFirstRussianPage.feature.cs">
+    <Compile Include="NavigationTests\OpenFirstRussianPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenFirstRussianPage.feature</DependentUpon>
     </Compile>
     <Compile Include="ScenarioHooks.cs" />
+    <Compile Include="LocaleTests\ChangeLocaleInURLOfPostPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeLocaleInURLOfPostPage.feature</DependentUpon>
+    </Compile>
     <Compile Include="StepsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ChangeLanguageOfPost.feature">
+    <None Include="LocaleTests\ChangeLanguageOfPost.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ChangeLanguageOfPost.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenFirstEnglishPage.feature">
+    <None Include="LocaleTests\ChangeLocaleInURLOfFirstPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangeLocaleInURLOfFirstPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="NavigationTests\OpenFirstEnglishPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenFirstEnglishPage.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenNextListingPage.feature">
+    <None Include="NavigationTests\OpenNextListingPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenNextListingPage.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenPost.feature">
+    <None Include="NavigationTests\OpenPost.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenPost.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenPreviousListingPage.feature">
+    <None Include="NavigationTests\OpenPreviousListingPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenPreviousListingPage.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="ChangLanguageOfFirstPage.feature">
+    <None Include="LocaleTests\ChangeLanguageOfFirstPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>ChangLanguageOfFirstPage.feature.cs</LastGenOutput>
+      <LastGenOutput>ChangeLanguageOfFirstPage.feature.cs</LastGenOutput>
     </None>
     <None Include="AddXSSInjection.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddXSSInjection.feature.cs</LastGenOutput>
     </None>
-    <None Include="OpenFirstRussianPage.feature">
+    <None Include="NavigationTests\OpenFirstRussianPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenFirstRussianPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="LocaleTests\ChangeLocaleInURLOfPostPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangeLocaleInURLOfPostPage.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

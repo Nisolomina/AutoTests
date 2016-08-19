@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutoTests
+namespace AutoTests.LocaleTests
 {
     using TechTalk.SpecFlow;
     
@@ -48,7 +48,7 @@ namespace AutoTests
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Change language of Post Page")))
             {
-                AutoTests.ChangeLanguageOfPostPageFeature.FeatureSetup(null);
+                AutoTests.LocaleTests.ChangeLanguageOfPostPageFeature.FeatureSetup(null);
             }
         }
         
@@ -69,18 +69,82 @@ namespace AutoTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the En button on English Post")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
+        public virtual void SeeTheEnButtonOnEnglishPost()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the En button on English Post", ((string[])(null)));
+#line 6
+this.ScenarioSetup(scenarioInfo);
+#line 7
+ testRunner.When("I open the site \'http://www.eugenesqr.com/en/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.Then("I am able to see EN button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the RU button on English Post")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
+        public virtual void SeeTheRUButtonOnEnglishPost()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the RU button on English Post", ((string[])(null)));
+#line 10
+this.ScenarioSetup(scenarioInfo);
+#line 11
+ testRunner.When("I open the site \'http://www.eugenesqr.com/en/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("I am able to see RU button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the En button on Russian Post")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
+        public virtual void SeeTheEnButtonOnRussianPost()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the En button on Russian Post", ((string[])(null)));
+#line 14
+this.ScenarioSetup(scenarioInfo);
+#line 15
+ testRunner.When("I open the site \'http://www.eugenesqr.com/ru/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("I am able to see EN button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See the RU button on Russian Post")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
+        public virtual void SeeTheRUButtonOnRussianPost()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See the RU button on Russian Post", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 19
+ testRunner.When("I open the site \'http://www.eugenesqr.com/ru/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.Then("I am able to see RU button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Change language of post from Russian to English")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
         public virtual void ChangeLanguageOfPostFromRussianToEnglish()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language of post from Russian to English", ((string[])(null)));
-#line 6
+#line 22
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 23
  testRunner.Given("I open the site \'http://www.eugenesqr.com/ru/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
+#line 24
  testRunner.When("I press button to change language to English on post page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
+#line 25
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/post/second-iteration-completed\' ur" +
                     "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -93,81 +157,12 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ChangeLanguageOfPostFromEnglishToRussian()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change language of post from English to Russian", ((string[])(null)));
-#line 11
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 12
- testRunner.Given("I open the site \'http://www.eugenesqr.com/en/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 13
- testRunner.When("I press button to change language to Russian on post page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/post/second-iteration-completed\' ur" +
-                    "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Russian post by default")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
-        public virtual void OpenRussianPostByDefault()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Russian post by default", ((string[])(null)));
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.When("I open the site \'http://www.eugenesqr.com//post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/post/second-iteration-completed\' ur" +
-                    "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open English post if English locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
-        public virtual void OpenEnglishPostIfEnglishLocaleInUrl()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open English post if English locale in url", ((string[])(null)));
-#line 20
-this.ScenarioSetup(scenarioInfo);
-#line 21
- testRunner.When("I open the site \'http://www.eugenesqr.com/en/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/en/post/second-iteration-completed\' ur" +
-                    "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Russian post if different locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
-        public virtual void OpenRussianPostIfDifferentLocaleInUrl()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Russian post if different locale in url", ((string[])(null)));
-#line 24
-this.ScenarioSetup(scenarioInfo);
-#line 25
- testRunner.When("I open the site \'http://www.eugenesqr.com/es/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
- testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/post/second-iteration-completed\' ur" +
-                    "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Russian post if unknown locale in url")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Change language of Post Page")]
-        public virtual void OpenRussianPostIfUnknownLocaleInUrl()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Russian post if unknown locale in url", ((string[])(null)));
 #line 28
-this.ScenarioSetup(scenarioInfo);
+ testRunner.Given("I open the site \'http://www.eugenesqr.com/en/post/second-iteration-completed\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
- testRunner.When("I open the site \'http://www.eugenesqr.com/abrakadabra/post/second-iteration-compl" +
-                    "eted\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press button to change language to Russian on post page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
  testRunner.Then("I am able to see \'http://www.eugenesqr.com/ru/post/second-iteration-completed\' ur" +
                     "l", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
